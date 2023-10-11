@@ -1,19 +1,26 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import org.example.vehicle.car.Sedan;
+import org.example.vehicle.car.Truck;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ornek1();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
+
+    public static void ornek1(){
+        Sedan sedan = new Sedan(2015);
+        sedan.go();
+        sedan.stop();
+        sedan.yakitTuru();
+        sedan.getModelYili();
+        sedan.yukTasima();
+        Truck truck = new Truck(2018);
+        truck.yakitTuru();
+        truck.go();
+        truck.getModelYili();
+        truck.yukTasima();
+    }
+
 }
