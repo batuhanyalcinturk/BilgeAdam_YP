@@ -17,7 +17,6 @@ public class BYReader {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Kelimeleri boşluk karakteri veya diğer ayırıcılarla bölmek yerine karakter dizisi üzerinden işleme alınabilir.
                 String[] wordArray = line.split("[\\s\\p{Punct}]+");
                 for (String word : wordArray) {
                     words.add(word);
@@ -42,6 +41,6 @@ public class BYReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null; // Belirtilen satır numarası bulunamazsa null döndürülür.
+        return null;
     }
 }
